@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:ital,wght@0,100;0,300;1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+body, html {
+  height: 100vh;
+}
+
+body {
+  margin: 60px;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(auto, 5);
+  grid-template-areas:
+      "sect1"
+      "sect2"
+      "sect3"
+      "main"
+      "footer";
+  font-family: Montserrat;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+aside {
+  grid-area: sidebar;
+  background-color: white;
+  padding:15px;
+  text-align: left;
+  margin-top: 50px;
+}
+.social_buttons {
+  grid-area: sidebar;
+  display:inline-block;
+  height:5px;
+  width:5px;
+  padding:25px;
+  opacity: 70%;
+}
+.social_buttons:hover {
+  grid-area: sidebar;
+  display:inline-block;
+  opacity: 100%;
+  transition: 0.5s;
+}
+
+.logo {
+cursor: pointer;
+max-width: 165px;
+margin-left: 20px;
+}
+
+.nav_links {
+list-style: none;
+margin-left: 35px;
+padding: 35px;
+text-decoration: none;
+}
+
+.nav_links li {
+display: inline-block;
+padding: 0px 20px;
+text-decoration: none;
+}
+
+.nav_links li a {
+transition: all 0.3s ease 0s;
+color:black;
+text-decoration: none;
+}
+
+.nav_links li a:hover {
+color: rgb(255, 165, 0);
+}
+
+header {
+  grid-area: header;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.title {
+grid-area: title;
+display: inline-grid;
+padding: 15px;
+margin-bottom: 55px;
+min-height: 55px;
+color: #313131;
+}
+
+section:nth-of-type(1) {
+  display: inline-grid;
+  grid-area: sect1;
+  min-height:250px;
+  max-width:540px;
+  padding:15px;
+  margin-bottom: 55px;
+  margin-top: 45px;
+} 
+
+section:nth-of-type(2) {
+  grid-area: sect2;
+  padding:15px;
+  margin-top: 55px;
+}
+section:nth-of-type(3) {
+  grid-area: sect3;
+  min-height:250px;
+  padding: 5%;
+  margin-top: 55px;
+}
+section:nth-of-type(4) {
+  grid-area: sect4;
+  right:35px;
+  padding:15px;
+  margin-top: 55px;
+}
+section:nth-of-type(5) {
+  grid-area: sect5;
+  background-color: pink;
+}
+section:nth-of-type(6) {
+  grid-area: sect6;
+  background-color: grey;
+}
+section:nth-of-type(7) {
+  grid-area: sect7;
+  background-color: pink;
+  min-height:250px;
+  padding: 15%;
+}
+
+.button {
+  display:inline-grid;
+  color: #313131;
+  height:35px;
+  width: 100px;
+  text-align:left;
+  position:bottom;
+  text-decoration: none;
+}
+.button:hover {
+  color: rgb(255, 165, 0);
+  text-decoration: underline;
+  transition: transform 0.3s ease;
+  transform-origin: top left;
+}
+
+footer {
+  grid-area: footer;
+  align-items: center;
+  display: inline-block;
+  margin-left: 40%;
